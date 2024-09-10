@@ -5,20 +5,21 @@ import PackageDescription
 
 let package = Package(
     name: "RTRootNavigationController",
+    platforms: [.iOS(.v12)],
     products: [
-            .library(name: "RTRootNavigationController", targets: ["RTRootNavigationController"]),
-        ],
-        dependencies: [],
-        targets: [
-            .target(
-                name: "RTRootNavigationController",
-                dependencies: [],
-                path: "RTRootNavigationController",
-                publicHeadersPath: "include",
-                cSettings: [
-                    //Config header path
-                    .headerSearchPath("."),
-                ]
-            ),
-        ]
+        .library(name: "RTRootNavigationController", targets: ["RTRootNavigationController"]),
+    ],
+    dependencies: [],
+    targets: [
+        .target(
+            name: "RTRootNavigationController",
+            dependencies: [],
+            path: "RTRootNavigationController",
+            publicHeadersPath: "include",
+            cSettings: [
+                //Config header path
+                .headerSearchPath(".")
+            ]
+        ),
+    ]
 )
