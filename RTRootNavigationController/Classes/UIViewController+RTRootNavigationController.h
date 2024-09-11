@@ -34,8 +34,7 @@
  *
  *  @return a custom UIBarButtonItem
  */
-- (UIBarButtonItem *)customBackItemWithTarget:(id)target action:(SEL)action DEPRECATED_MSG_ATTRIBUTE("use rt_customBackItemWithTarget:action: instead!");
-- (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action;
+- (UIBarButtonItem * _Nullable)rt_customBackItemWithTarget:(id _Nullable )target action:(SEL _Nonnull )action;
 
 @end
 
@@ -50,16 +49,16 @@ IB_DESIGNABLE
 /*!
  *  @brief @c self\.navigationControlle will get a wrapping @c UINavigationController, use this property to get the real navigation controller
  */
-@property (nonatomic, readonly, strong) RTRootNavigationController *rt_navigationController;
+@property (nonatomic, readonly, strong) RTRootNavigationController * _Nullable rt_navigationController;
 
 /*!
  *  @brief Override this method to provide a custom subclass of @c UINavigationBar, defaults return nil
  *
  *  @return new UINavigationBar class
  */
-- (Class)rt_navigationBarClass;
+- (Class _Nullable)rt_navigationBarClass;
 
 
-@property (nonatomic, readonly) id<UIViewControllerAnimatedTransitioning> rt_animatedTransitioning;
+@property (nonatomic, readonly) id<UIViewControllerAnimatedTransitioning> _Nullable rt_animatedTransitioning;
 
 @end
