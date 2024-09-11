@@ -29,7 +29,7 @@ you can have each view controller a individual navigation bar.
   s.default_subspec  = 'Core'
 
   s.subspec 'Core' do |core|
-    core.source_files = 'RTRootNavigationController/Classes/**/*'
+    core.source_files = 'RTRootNavigationController/**/*'
   end
 
   s.subspec 'Push' do |push|
